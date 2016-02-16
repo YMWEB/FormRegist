@@ -1,0 +1,14 @@
+<section>
+	
+<form name="loginform" ng-submit="login()" novalidate>
+	<fieldset>
+	<p>Email: <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true"/></p>
+	<p ng-show="loginform.email.$invalid&&loginform.email.$touched">Must be a valid email</p>
+
+	<p>Password: <input type="password" name="pwd" ng-model="user.pwd" ng-required="true"/></p>
+	<p ng-show="formReg.pwd.$invalid&&formReg.email.$touched">Password is required</p>
+	</fieldset>
+	<p><input type="submit" value="Login" ng-disabled="loginform.$invalid"/></p>
+	<p>{{message}}</p>
+</form>
+</section>

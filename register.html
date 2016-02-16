@@ -1,0 +1,15 @@
+<section>
+	
+<form name="registform" ng-submit="regist()" novalidate>
+	<fieldset>
+	<p>Email: <input type="email" name="email" placeholder="Email" ng-model="user.email" ng-required="true"/></p>
+	<p ng-show="registform.email.$invalid&&registform.email.$touched">Must be a valid email</p>
+
+	<p>Password: <input type="password" name="pwd" ng-model="user.pwd" ng-required="true"/></p>
+	<p ng-show="registform.pwd.$invalid&&registform.email.$touched">Password is required</p>
+	</fieldset>
+	<p><input type="submit" value="Login" ng-disabled="registform.$invalid"/></p>
+	<p>{{message}}</p>
+</form>
+
+</section>
